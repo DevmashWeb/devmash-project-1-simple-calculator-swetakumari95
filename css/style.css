@@ -2,14 +2,11 @@
 
 @font-face{
     font-family: digital;
-    src: url(digital-7.ttf);
+    src: url(../digital-7.ttf);
 }
 
-h2{
-    font-family: Open Sans;
-    text-align: center;
-    text-transform: uppercase;
-    color: #555;
+body{
+    padding: 2em;
 }
 
 .container{
@@ -20,22 +17,36 @@ h2{
 
 .box{
     flex-basis: 350px;
-    border: 2px solid black;
+    border: 2px solid #555;
     padding: 1em;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: dimgrey;
 }
 
-input[type=number]{
+h6{
+    font-family: Open Sans;
+    text-align: right;
+    text-transform: uppercase;
+    color: antiquewhite;
+}
+
+input[type=text]{
     width: 100%;
     background-color: #bccd95;
-    padding: 25px;
-    font-family: digital;
+    padding: 30px 10px;
+    font-family: digital, Open Sans;
+    font-size: 2.5em;
+    text-align: right;
 }
 
 .keys{
     padding-top: 10px;
+}
+
+.keys div:first-child input:nth-child(1),.keys div:first-child input:nth-child(2),.keys div:first-child input:nth-child(3){
+    background-color: orange;
+    border: 1px solid darkorange;
 }
 
 .keys input{
@@ -45,8 +56,8 @@ input[type=number]{
     border-radius: 10px;
     box-shadow: 5px 5px #555;
     min-width: 80px; 
-    margin-left: 1px;
-    margin-right: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .keys input:active{

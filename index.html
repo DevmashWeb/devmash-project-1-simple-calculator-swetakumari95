@@ -21,55 +21,58 @@
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="images/favicon.png" rel="icon" type="image/png">
-    <script src="js/script.js" type="text/javascript"></script>
+    
 </head>
 
 <body>
-    
-    <h2>Antique Calculator</h2>
-    
+
     <div class="container">
         <div class="box">
-            <input type="number" name="number" placeholder="Hey, Enter something!">
+            
+            <h6>Basic Calculator</h6>
+            
+            <input id="output" type="text" name="text" placeholder="Hey, Enter something!">
             
             <div class="keys">
                 <div>
-                    <input type="button" value="AC">
-                    <input type="button" value="CE">
-                    <input type="button" value="%">
-                    <input type="button" value="/" >
+                    <input type="button" value="ON" onclick="clicked1()">
+                    <input type="button" value="AC" onclick="clicked2()">
+                    <input type="button" value="CE" onclick="clicked3()">
+                    <input type="button" value="/" onclick="clicked4()">
                 </div>
                 
                 <div>
-                    <input type="button" value="7" >
-                    <input type="button" value="8" >
-                    <input type="button" value="9" >
-                    <input type="button" value="*" >
+                    <input type="button" value="7" onclick="clicked5()">
+                    <input type="button" value="8" onclick="clicked6()">
+                    <input type="button" value="9" onclick="clicked7()">
+                    <input type="button" value="*" onclick="clicked8()">
                 </div>
                 
                 <div>
-                    <input type="button" value="4" >
-                    <input type="button" value="5" >
-                    <input type="button" value="6" >
-                    <input type="button" value="-" >
+                    <input type="button" value="4" onclick="clicked9()">
+                    <input type="button" value="5" onclick="clicked10()">
+                    <input type="button" value="6" onclick="clicked11()">
+                    <input type="button" value="-" onclick="clicked12()">
                 </div>
                 
                 <div>
-                    <input type="button" value="1" >
-                    <input type="button" value="2" >
-                    <input type="button" value="3" >
-                    <input type="button" value="#">
+                    <input type="button" value="1" onclick="clicked13()">
+                    <input type="button" value="2" onclick="clicked14()">
+                    <input type="button" value="3" onclick="clicked15()">
+                    <input type="button" value="%" onclick="clicked16()">
                 </div>
                 
                 <div>
-                    <input type="button" value="0" >
-                    <input type="button" value="." >
-                    <input type="button" value="+">
-                    <input class="equal" type="button" value="=">
+                    <input type="button" value="0" onclick="clicked17()">
+                    <input type="button" value="." onclick="clicked18()">
+                    <input type="button" value="+" onclick="clicked19()">
+                    <input type="button" value="=" onclick="clicked20()">
                 </div>
             </div>
         </div>
     </div>
+    
+    <script src="js/script.js" type="text/javascript"></script>
     
 </body>
 
