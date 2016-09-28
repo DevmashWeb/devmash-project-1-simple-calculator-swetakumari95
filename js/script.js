@@ -3,17 +3,29 @@ var flag=0; //to clear screen after =
 
 function clicked1(){
 
-    //key ON
+    //key OFF
     if (flag==1)
     {
         out.value = "";
         flag=0;
     }
-    //toggles the placeholder in display
+    //toggles the placeholder in display, disables all keys if turned off
     if (out.placeholder=="Hey, Enter something!")
+    {
         out.placeholder="";
+        var keydisable = document.getElementsByTagName("input");
+        keydisable[1].value = "ON";
+        for (i=2;i<keydisable.length;i++)
+            document.getElementsByTagName("input")[i].disabled = true;
+    }
     else
-        out.placeholder="Hey, Enter something!";
+    {
+        out.placeholder="Hey, Enter something!";    
+        var keydisable = document.getElementsByTagName("input");
+        keydisable[1].value = "OFF";
+        for (i=2;i<keydisable.length;i++)
+            document.getElementsByTagName("input")[i].disabled = false;
+    }
     
     out.value = "";
     
