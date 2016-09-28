@@ -17,11 +17,14 @@ body{
 
 .box{
     flex-basis: 350px;
-    border: 2px solid #555;
     padding: 1em;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: dimgrey;
+    background: -webkit-linear-gradient(left, #444, #222);
+    background: -moz-linear-gradient(left, #444, #222);
+    background: -o-linear-gradient(left, #444, #222);
+    
 }
 
 h6{
@@ -38,6 +41,10 @@ input[type=text]{
     font-family: digital, Open Sans;
     font-size: 2.5em;
     text-align: right;
+    border-top: 3px solid #ccc;
+    border-left: 3px solid #eee;
+    border-bottom: 5px solid #555;
+    border-right: 5px solid #777;
 }
 
 .keys{

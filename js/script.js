@@ -41,7 +41,8 @@ function clicked3(){
         flag=0;
     }
     //clears screen value
-    out.value = "";
+    var str = out.value;
+    out.value = str.substring(0,str.length-1);
     
 }
 
@@ -244,14 +245,32 @@ function clicked20(){
     //if % is used, calculate % by extracting no
     if (exp.slice(-1)=="%")
     {
-        var str = Number(exp.substring(0,exp.length-1));
-        var num = Number(str)/100;
-        out.value = num;
+        var str = exp.substring(0,exp.length-1);
+        try{
+            str = eval(str);
+            var num = Number(str)/100;
+            out.value = num;
+        }
+        catch(e){
+            if (e instanceof SyntaxError)
+                out.value = "Syntax Error";
+            else
+                out.value = "Error";
+        }
+        
     }
     else
     {  
         //simply evaluate expression
-        out.value = eval(exp);
+        try{
+            out.value = eval(exp);
+        }
+        catch(e){
+            if (e instanceof SyntaxError)
+                out.value = "Syntax Error";
+            else
+                out.value = "Error";
+        }
     }
     flag = 1;
     
